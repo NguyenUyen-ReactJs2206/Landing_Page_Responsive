@@ -1,0 +1,8 @@
+// xoa nhung cai thua
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
