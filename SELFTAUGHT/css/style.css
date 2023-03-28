@@ -44,8 +44,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777777;
-  padding: 3rem; }
+  color: #777777; }
 
 .heading-primary {
   color: #fff;
@@ -134,6 +133,12 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+.btn--blue {
+  background-color: #5a73fc;
+  color: #fff; }
+  .btn--blue::after {
+    background-color: #5a73fc; }
+
 .btn-text {
   transition: all 0.2s; }
   .btn-text:link, .btn-text:visited {
@@ -212,6 +217,9 @@ body {
   clip-path: ellipse(70% 50% at 50% 50%);
   margin-top: -20rem; }
 
+.section-courses {
+  margin-top: 6rem; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -266,3 +274,97 @@ body {
   .skill-box:hover {
     cursor: pointer;
     transform: translateY(-1.5rem) scale(1.03); }
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 45rem; }
+  .card__side {
+    color: #fff;
+    font-size: 2rem;
+    height: 45rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 5rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right, #8e9efc, #1c3eff); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right, #55c57a, #28b485); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotate(0); }
+  .card__picture {
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 23rem;
+    clip-path: ellipse(80% 70% at 50% 30%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right, #ffb900, #ff7730), url("../img/involve1.jpg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right, #8e9efc, #1c3eff), url("../img/involve2.jpg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right, #55c57a, #28b485), url("../img/involve3.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    border-radius: 5rem;
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.85), rgba(28, 62, 255, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85)); }
+  .card__details {
+    padding: 3rem;
+    color: #777777; }
+    .card__details ul {
+      list-style: none;
+      width: 70%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #dbdbdb; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 5rem; }
